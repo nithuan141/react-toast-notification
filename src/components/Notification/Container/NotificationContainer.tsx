@@ -1,13 +1,16 @@
 import { FC } from "react"
-import { useNotifications } from "../../../hooks"
-import { NotificationElement } from "../NotificationElement/NotificationElement"
+import { NotificationProvider } from "../../../context/Notifications.context"
+import { Notifications } from "./Notifications"
 
-import styles from './NotificationContainer.module.scss'
-
-export const NotificationContainer: FC = () => {
-    const { notifications } = useNotifications()
-
-    return <div className={styles.notification}>
-        {notifications?.map(note => <NotificationElement key={note} content={note}/>)}
-    </div>
+export type NotificationContainerProps = {
+    children: JSX.Element | Array<JSX.Element>
 }
+
+export const NotificationContainer: FC<NotificationContainerProps> = ({ children }) => (
+    <NotificationProvider>
+        <>
+            <Notifications />
+            {children}
+        </>
+    </NotificationProvider>
+)

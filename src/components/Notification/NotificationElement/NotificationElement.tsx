@@ -1,12 +1,13 @@
 import { FC } from "react"
+import { Notification } from "../../../types/common"
 import styles from './NotificationElement.module.scss'
 
 type NotificationElementProps = {
-    content: string | Element
+    notification: Notification
 }
 
-export const NotificationElement: FC<NotificationElementProps> = (props: NotificationElementProps) => {
-    const { content } = props
+export const NotificationElement: FC<NotificationElementProps> = ({ notification }) => {
+    const { content } = notification
     return <div className={styles.notificationElement}>
         {content}
     </div>

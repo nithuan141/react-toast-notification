@@ -1,8 +1,8 @@
-import { NotificationContainer } from '../components/Notification'
+import { SuccessButton } from "../components/Home"
 
 export const HomePage = () => {
-    return <>
-    <NotificationContainer /> 
-    <div>This is the home page</div>
-    </>
+    return <div>
+        <div>This is the home page</div>
+        <SuccessButton />
+    </div>
 }
