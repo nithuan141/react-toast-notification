@@ -1,10 +1,11 @@
 import React from 'react'
+import { v4 as uuidv4 } from 'uuid';
 import { Notification, NotificationType } from '../types/common'
 
 export type NotificationProps = {
 	notifications: Array<Notification>
 	addNotification: (content: string, type: NotificationType, timeout?: number, callback?: Function) => void
-	removeNotification: (id: number) => void
+	removeNotification: (id: string) => void
 }
 
 export type NotificationProviderProps = {
@@ -22,7 +23,7 @@ const useNotification = (): Partial<NotificationProps> => React.useContext(Notif
 const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
 	const [notifications, setNotifications] = React.useState<Array<Notification>>([])
 
-	const nextId = () => (notifications[notifications.length - 1]?.id || 0) + 1
+	const nextId = () => uuidv4()
 
 	const addNotification = (content: string, type: NotificationType, timeout?: number, callback?: Function) => {
 		const notification: Notification = {
@@ -35,7 +36,7 @@ const NotificationProvider: React.FC<NotificationProviderProps> = ({ children })
 		setNotifications([...notifications, notification])
 	}
 
-	const removeNotification = (id: number) => setNotifications(notifications.filter((x: Notification) => x.id !== id))
+	const removeNotification = (id: string) => setNotifications(notifications.filter((x: Notification) => x.id !== id))
 
 	return (
 		<NotificationContext.Provider

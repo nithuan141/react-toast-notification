@@ -5,16 +5,28 @@
 }
 
 .success {
-    background-color: green;
+    background-color: #b8f5c7;
+    border: 2px solid #21975a;
+    border-radius: 4px;
 }
 .warning {
-    background-color: orange;
+    background-color: #d3be98;
+    border: 2px solid #db8c24;
+    border-radius: 4px;
 }
 
 .error {
-    background-color: red;
+    background-color: #d49a9a;
+    border: 2px solid #cc310b;
+    border-radius: 4px;
 }
 
 .info {
-    background-color: gray;
+    background-color: #97b9cc;
+    border: 2px solid #295eb4;
+    border-radius: 4px;
+}
+
+.removeButton {
+    margin: 4px;
 }

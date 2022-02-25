@@ -12,9 +12,9 @@ export enum NotificationPosition {
 }
 
 export type Notification = {
+    id: string
     content: string
     type: NotificationType
-    id: number
     position?: NotificationPosition
     timeout?: number
     callback?: Function
