@@ -1,3 +1,20 @@
 .notificationElement {
-    background-color: aquamarine;
+    padding: 8px;
+    margin: 8px;   
+    text-align: left;
+}
+
+.success {
+    background-color: green;
+}
+.warning {
+    background-color: orange;
+}
+
+.error {
+    background-color: red;
+}
+
+.info {
+    background-color: gray;
 }

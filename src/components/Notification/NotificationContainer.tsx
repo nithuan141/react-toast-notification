@@ -1,6 +1,6 @@
 import { FC } from "react"
-import { NotificationProvider } from "../../../context/Notifications.context"
-import { Notifications } from "./Notifications"
+import { NotificationProvider } from "../../context/Notifications.context"
+import { NotificationList } from "./NotificationList/NotificationList"
 
 export type NotificationContainerProps = {
     children: JSX.Element | Array<JSX.Element>
@@ -9,7 +9,7 @@ export type NotificationContainerProps = {
 export const NotificationContainer: FC<NotificationContainerProps> = ({ children }) => (
     <NotificationProvider>
         <>
-            <Notifications />
+            <NotificationList />
             {children}
         </>
     </NotificationProvider>

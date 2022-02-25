@@ -1,8 +1,13 @@
-import { SuccessButton } from "../components/Home"
+import { ErrorButton, InfoButton, SuccessButton, WarningButton } from "../components/Home"
 
 export const HomePage = () => {
     return <div>
         <div>This is the home page</div>
-        <SuccessButton />
+        <div style={{display: 'flex', flexDirection: 'column', alignItems:'center'}}>
+            <SuccessButton />
+            <WarningButton />
+            <ErrorButton />
+            <InfoButton />
+        </div>
     </div>
 }
