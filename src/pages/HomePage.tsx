@@ -1,4 +1,4 @@
-import { ErrorButton, InfoButton, SuccessButton, WarningButton } from "../components/Home"
+import { ErrorButton, InfoButton, SuccessButton, WarningButton } from "@components/Home"
 
 export const HomePage = () => {
     return <div>

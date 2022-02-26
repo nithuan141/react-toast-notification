@@ -6,10 +6,12 @@
       "@components/*": ["./components/*"],
       "@": ["./"],
       "@/*": ["./*"],
-      "@img": ["./img"],
-      "@img/*": ["./img/*"],
-      "@hooks": ["./hooks"],
-      "@hooks/*": ["./hooks/*"],
+      "@types": ["./types"],
+      "@types/*": ["./types/*"],
+      "@contexts": ["./contexts"],
+      "@contexts/*": ["./contexts/*"],
+      "@pages": ["./pages"],
+      "@pages/*": ["./pages/*"]
     }
   }
 }

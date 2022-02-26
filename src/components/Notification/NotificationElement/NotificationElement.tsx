@@ -1,7 +1,7 @@
 import { FC } from "react"
 import classNames from "classnames"
-import { useNotification } from "../../../context/Notifications.context"
-import { Notification, NotificationType } from "../../../types/common"
+import { useNotification } from "@contexts/Notifications.context"
+import { Notification, NotificationType } from "@types"
 
 import styles from './NotificationElement.module.scss'
 
@@ -15,7 +15,7 @@ export const NotificationElement: FC<NotificationElementProps> = ({ notification
 
     const onRemoveNotification = () => removeNotification?.(id)
 
-    // Auto remove if there is a timeout has set
+    // Auto hide if there is a timeout has set
     timeout && setTimeout(() => {
         removeNotification?.(id)
     }, timeout)

@@ -1,6 +1,6 @@
 import './App.css';
-import { NotificationContainer } from './components/Notification';
-import { HomePage } from './pages';
+import { NotificationContainer } from '@components/Notification';
+import { HomePage } from '@pages';
 
 function App() {
   return (

@@ -1,5 +1,5 @@
-import { useNotification } from "../../context/Notifications.context"
-import { NotificationType } from "../../types/common"
+import { useNotification } from "@contexts/Notifications.context"
+import { NotificationType } from "@types"
 
 import styles from './Home.module.scss'
 

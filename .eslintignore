@@ -1,0 +1,7 @@
+# Folders to ignore
+build/*
+.yarn/*
+node_modules/*
+
+# Do not format markdown files
+*.md

@@ -1,6 +1,6 @@
 import React from 'react'
 import { v4 as uuidv4 } from 'uuid';
-import { Notification, NotificationType } from '../types/common'
+import { Notification, NotificationType } from '@types'
 
 export type NotificationProps = {
 	notifications: Array<Notification>

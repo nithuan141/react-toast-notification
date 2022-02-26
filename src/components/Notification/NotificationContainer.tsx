@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { NotificationProvider } from "../../context/Notifications.context"
+import { NotificationProvider } from "@contexts/Notifications.context"
 import { NotificationList } from "./NotificationList/NotificationList"
 
 export type NotificationContainerProps = {
