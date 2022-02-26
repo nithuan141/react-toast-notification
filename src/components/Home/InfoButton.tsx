@@ -7,15 +7,14 @@ import styles from './Home.module.scss'
 
 type InfoButtonProps = {
     timer?: number,
-    callback?: Function
 }
 
-export const InfoButton: FC<InfoButtonProps> = ({ timer, callback }) => {
+export const InfoButton: FC<InfoButtonProps> = ({ timer }) => {
     const { addNotification } = useNotification()
 
-    const notify = () => addNotification?.("Info", "This is a sample info notification", NotificationType.Info, timer, callback)
+    const notify = () => addNotification?.("Info", "This is a sample info notification", NotificationType.Info, timer)
 
     return <Button onClick={notify} className={styles.button} type={ButtonType.Secondary}>
-        {`I am an info toast ${timer ? 'with auto hide' : ''} ${callback ? 'and callback' : ''}`}
+        {`I am an info toast ${timer ? 'with auto hide' : ''}`}
     </Button>
 }

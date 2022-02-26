@@ -5,10 +5,10 @@ export const HomePage = () => {
         <div>This is the home page</div>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <SuccessButton />
-            <WarningButton />
+            <WarningButton callback={() => { alert("I am a callback on remove") }} />
             <ErrorButton />
             <InfoButton />
-            <InfoButton timer={2000} callback={() => { alert("I am a callback on remove") }} />
+            <InfoButton timer={2000}/>
         </div>
     </div>
 }
