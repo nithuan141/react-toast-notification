@@ -1,11 +1,16 @@
-import { FC } from "react"
+import { FC, useEffect } from "react"
 import classNames from "classnames"
 import { useNotification } from "@contexts/Notifications.context"
 import { Notification, NotificationType } from "@types"
-import { CloseIcon, InfoIcon, TickIcon, ErrorIcon } from "@components/Shared/Icons"
+import {
+    CloseIcon,
+    InfoIcon,
+    TickIcon,
+    ErrorIcon,
+    WarningIcon
+} from "@components/Shared/Icons"
 
 import styles from './NotificationElement.module.scss'
-import { useEffect } from "react"
 
 type NotificationElementProps = {
     notification: Notification
@@ -18,7 +23,7 @@ export const NotificationElement: FC<NotificationElementProps> = ({ notification
     const onRemoveNotification = () => removeNotification?.(id)
 
     useEffect(() => {
-        // Auto hide if there is a timeout has set
+        // Auto hide if there is a timer value .
         timeout && setTimeout(() => {
             removeNotification?.(id)
         }, timeout)
@@ -53,6 +58,6 @@ const getNotificationIcon = (type: NotificationType) => {
         case NotificationType.Error:
             return <ErrorIcon fill='#A0676E' />
         case NotificationType.Warning:
-            return <InfoIcon fill='#997C42' />
+            return <WarningIcon fill='#997C42' />
     }
 }

@@ -1,4 +1,3 @@
-import './App.css';
 import { NotificationContainer } from '@components/Notification';
 import { HomePage } from '@pages';
 
