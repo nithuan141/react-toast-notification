@@ -42,7 +42,12 @@ const NotificationProvider: React.FC<NotificationProviderProps> = ({ children })
 		setNotifications([...notifications, notification])
 	}
 
-	const removeNotification = (id: string) => setNotifications(notifications.filter((x: Notification) => x.id !== id))
+	const removeNotification = (id: string) => {
+		const notification = notifications.find((x: Notification) => x.id === id)
+		setNotifications(notifications.filter((x: Notification) => x.id !== id))
+		// Triggering call back on remove if there is one.
+		notification?.callback && notification.callback?.()
+	}
 
 	return (
 		<NotificationContext.Provider

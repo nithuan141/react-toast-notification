@@ -5,6 +5,7 @@ import { Notification, NotificationType } from "@types"
 import { CloseIcon, InfoIcon, TickIcon, ErrorIcon } from "@components/Shared/Icons"
 
 import styles from './NotificationElement.module.scss'
+import { useEffect } from "react"
 
 type NotificationElementProps = {
     notification: Notification
@@ -16,10 +17,12 @@ export const NotificationElement: FC<NotificationElementProps> = ({ notification
 
     const onRemoveNotification = () => removeNotification?.(id)
 
-    // Auto hide if there is a timeout has set
-    timeout && setTimeout(() => {
-        removeNotification?.(id)
-    }, timeout)
+    useEffect(() => {
+        // Auto hide if there is a timeout has set
+        timeout && setTimeout(() => {
+            removeNotification?.(id)
+        }, timeout)
+    })
 
     return <div className={classNames(styles.notificationElement, {
         [styles.success]: type === NotificationType.Success,

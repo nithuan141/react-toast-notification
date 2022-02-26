@@ -6,15 +6,16 @@ import { NotificationType } from "@types"
 import styles from './Home.module.scss'
 
 type InfoButtonProps = {
-    timer?: number
+    timer?: number,
+    callback?: Function
 }
 
-export const InfoButton: FC<InfoButtonProps> = ({timer}) => {
+export const InfoButton: FC<InfoButtonProps> = ({ timer, callback }) => {
     const { addNotification } = useNotification()
 
-    const notify = () => addNotification?.("Info", "This is a sample info notification", NotificationType.Info, timer)
+    const notify = () => addNotification?.("Info", "This is a sample info notification", NotificationType.Info, timer, callback)
 
     return <Button onClick={notify} className={styles.button} type={ButtonType.Secondary}>
-        {`I am an info toast ${timer ? 'with auto hide' : ''}`}
+        {`I am an info toast ${timer ? 'with auto hide' : ''} ${callback ? 'and callback' : ''}`}
     </Button>
 }
