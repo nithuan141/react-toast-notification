@@ -1,3 +1,4 @@
+import { Button } from "@components/Shared"
 import { useNotification } from "@contexts/Notifications.context"
 import { NotificationType } from "@types"
 
@@ -8,5 +9,5 @@ export const SuccessButton = () => {
 
     const notify = () => addNotification?.("This is a sample success notification", NotificationType.Success)
 
-    return <button onClick={notify} className={styles.button}>I am a success toast</button>
+    return <Button onClick={notify} className={styles.button}>I am a success toast</Button>
 }

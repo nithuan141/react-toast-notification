@@ -8,6 +8,7 @@ export const HomePage = () => {
             <WarningButton />
             <ErrorButton />
             <InfoButton />
+            <InfoButton timer={2000}/>
         </div>
     </div>
 }
