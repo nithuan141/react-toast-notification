@@ -15,6 +15,7 @@
     "immutable": "^4.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
     "react-scripts": "5.0.0",
     "rimraf": "^3.0.2",
     "sass": "^1.49.8",
@@ -27,8 +28,7 @@
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "craco start",
     "build": "craco build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "test": "craco test",
     "lint": "eslint --fix src/**/*.{js,jsx,ts,tsx} -c ./.eslintrc.js --cache"
   },
   "eslintConfig": {

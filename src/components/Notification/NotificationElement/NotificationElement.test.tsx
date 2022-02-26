@@ -3,7 +3,7 @@ import { NotificationElement } from './NotificationElement';
 import { v4 as uuidv4 } from 'uuid';
 import { Notification, NotificationType } from '@types';
 
-test('renders learn react link', () => {
+test('verifies the notification renders', () => {
     const notification: Notification = {
         id:  uuidv4(),
         content: "Test notification",

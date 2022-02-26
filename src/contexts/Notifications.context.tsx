@@ -4,7 +4,7 @@ import { Notification, NotificationType } from '@types'
 
 export type NotificationProps = {
 	notifications: Array<Notification>
-	addNotification: (content: string, type: NotificationType, timeout?: number, callback?: Function) => void
+	addNotification: (title: string, content: string, type: NotificationType, timeout?: number, callback?: Function) => void
 	removeNotification: (id: string) => void
 }
 
@@ -25,9 +25,15 @@ const NotificationProvider: React.FC<NotificationProviderProps> = ({ children })
 
 	const nextId = () => uuidv4()
 
-	const addNotification = (content: string, type: NotificationType, timeout?: number, callback?: Function) => {
+	const addNotification = (
+		title: string, 
+		content: string, 
+		type: NotificationType, 
+		timeout?: number, 
+		callback?: Function) => {
 		const notification: Notification = {
 			id: nextId(),
+			title,
 			content,
 			type,
 			timeout,

@@ -7,6 +7,7 @@ export type Notification = {
     position?: NotificationPosition
     timeout?: number
     callback?: Function
+    title?: string
 }
 
 export {

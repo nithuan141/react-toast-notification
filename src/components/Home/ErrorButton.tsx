@@ -7,7 +7,7 @@ import styles from './Home.module.scss'
 export const ErrorButton = () => {
     const { addNotification } = useNotification()
 
-    const notify = () => addNotification?.("This is a sample error notification", NotificationType.Error)
+    const notify = () => addNotification?.("Action Item", "This is a sample error notification", NotificationType.Error)
 
     return <Button onClick={notify} className={styles.button} type={ButtonType.Error}>
         I am an error toast

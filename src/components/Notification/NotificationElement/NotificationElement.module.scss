@@ -1,32 +1,62 @@
 .notificationElement {
-    padding: 8px;
-    margin: 8px;   
+    position: relative;
+    width: 390px;
+    padding: 8px ;
+    border: 2px solid;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #ffffff;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.head {
+    font-size: 16px;
+    color: #474747;
     text-align: left;
+    padding-left: 4px;
+    margin: 0;
+}
+
+.content {
+    font-size: 14px;
+    color: #474747;
+    text-align: left;
+    padding-left: 4px;
+    margin: 0;
 }
 
 .success {
-    background-color: #b8f5c7;
-    border: 2px solid #21975a;
-    border-radius: 4px;
+    border-color: #54947C;
+    background-color: #b0d4c7;
 }
 .warning {
-    background-color: #d3be98;
-    border: 2px solid #db8c24;
-    border-radius: 4px;
+    border-color: #997C42;
+    background-color: #f3dbab;
 }
 
 .error {
-    background-color: #d49a9a;
-    border: 2px solid #cc310b;
-    border-radius: 4px;
+    border-color: #A0676E;
+    background-color: #f7b8bf;
 }
 
 .info {
-    background-color: #97b9cc;
-    border: 2px solid #295eb4;
-    border-radius: 4px;
+    border-color: #5B8496;
+    background-color: #b1def1;
 }
 
-.removeButton {
-    margin: 4px;
+.leftArea {
+    width: 30px;
+    padding-top: 12px;
 }

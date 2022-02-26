@@ -7,7 +7,7 @@ import styles from './Home.module.scss'
 export const SuccessButton = () => {
     const { addNotification } = useNotification()
 
-    const notify = () => addNotification?.("This is a sample success notification", NotificationType.Success)
+    const notify = () => addNotification?.("Success", "This is a sample success notification", NotificationType.Success)
 
     return <Button onClick={notify} className={styles.button}>I am a success toast</Button>
 }
