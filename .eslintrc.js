@@ -52,8 +52,7 @@ module.exports = {
     "@typescript-eslint/no-extra-semi": ["off"],
     "import/prefer-default-export": "off",
     "react/require-default-props": "off",
-    "react/function-component-definition": "off",
-    "max-len": ["error", {"code": 120}]
+    "react/function-component-definition": "off"
   },
   overrides: [],
 };
