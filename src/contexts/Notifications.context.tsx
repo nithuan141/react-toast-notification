@@ -1,13 +1,14 @@
 import React, { useCallback, useMemo } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { Notification, NotificationType } from "@types";
+import { Notification, NotificationPosition, NotificationType } from "@types";
 
 export type NotificationProps = {
-  notifications: Array<Notification>;
+  notifications: Notification[];
   addNotification: (
     title: string,
     content: string,
     type: NotificationType,
+    position?: NotificationPosition,
     timeout?: number,
     callback?: () => void | unknown
   ) => void;
@@ -15,7 +16,7 @@ export type NotificationProps = {
 };
 
 export type NotificationProviderProps = {
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[] | undefined;
 };
 
 const initialState = {
@@ -41,6 +42,7 @@ const NotificationProvider: React.FC<NotificationProviderProps> = ({
     title: string,
     content: string,
     type: NotificationType,
+    position?: NotificationPosition,
     timeout?: number,
     callback?: () => void | unknown
   ) => {
@@ -51,6 +53,7 @@ const NotificationProvider: React.FC<NotificationProviderProps> = ({
       type,
       timeout,
       callback,
+      position: position || NotificationPosition.TopRight,
     };
     setNotifications([...notifications, notification]);
   };

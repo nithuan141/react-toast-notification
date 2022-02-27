@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Button, ButtonType } from "@components/Shared";
 import { useNotification } from "@contexts/Notifications.context";
-import { NotificationType } from "@types";
+import { NotificationPosition, NotificationType } from "@types";
 
 import styles from "./Home.module.scss";
 
@@ -17,6 +17,7 @@ export const InfoButton: FC<InfoButtonProps> = ({ timer }) => {
       "Info",
       "This is a sample info notification",
       NotificationType.Info,
+      NotificationPosition.TopLeft,
       timer
     );
 

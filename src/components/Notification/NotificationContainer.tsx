@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { NotificationProvider } from "@contexts/Notifications.context";
-import { NotificationList } from "./NotificationList/NotificationList";
+import { NotificationPositionWrapper } from "./NotificationList/NotificationPositionWrapper";
 
 export type NotificationContainerProps = {
   children: JSX.Element | Array<JSX.Element>;
@@ -10,9 +10,6 @@ export const NotificationContainer: FC<NotificationContainerProps> = ({
   children,
 }) => (
   <NotificationProvider>
-    <>
-      <NotificationList />
-      {children}
-    </>
+    <NotificationPositionWrapper>{children}</NotificationPositionWrapper>
   </NotificationProvider>
 );

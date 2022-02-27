@@ -1,5 +1,23 @@
 .notification {
     position: fixed;
+}
+
+.topRight {
     top: 15px;
     right: 15px;
+}
+
+.topLeft {
+    top: 15px;
+    left: 15px;
+}
+
+.bottomRight {
+    bottom: 15px;
+    right: 15px;
+}
+
+.bottomLeft {
+    bottom: 15px;
+    left: 15px;
 }
