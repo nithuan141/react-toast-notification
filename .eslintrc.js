@@ -50,9 +50,9 @@ module.exports = {
     "jest/valid-title": "off",
     "sonarjs/no-gratuitous-expressions": "off",
     "@typescript-eslint/no-extra-semi": ["off"],
-	"import/prefer-default-export": "off",
-	"react/require-default-props": "off",
-	"react/function-component-definition": "off"
+    "import/prefer-default-export": "off",
+    "react/require-default-props": "off",
+    "react/function-component-definition": "off"
   },
   overrides: [],
 };
