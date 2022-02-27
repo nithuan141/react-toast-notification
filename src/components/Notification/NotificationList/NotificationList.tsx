@@ -1,14 +1,20 @@
-import { FC } from "react"
-import { useNotification } from "@contexts/Notifications.context"
-import { NotificationElement } from "../NotificationElement/NotificationElement"
+import { FC } from "react";
+import { useNotification } from "@contexts/Notifications.context";
+import { NotificationElement } from "../NotificationElement/NotificationElement";
 
-import styles from './NotificationList.module.scss'
+import styles from "./NotificationList.module.scss";
 
 export const NotificationList: FC = () => {
-    const { notifications } = useNotification()
+  const { notifications } = useNotification();
 
-    return <div className={styles.notification}>
-        {notifications?.map(notification => <NotificationElement key={notification.id} notification={notification} />)}
+  return (
+    <div className={styles.notification}>
+      {notifications?.map((notification) => (
+        <NotificationElement
+          key={notification.id}
+          notification={notification}
+        />
+      ))}
     </div>
-}
-
+  );
+};

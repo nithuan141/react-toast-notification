@@ -20,22 +20,17 @@
     "rimraf": "^3.0.2",
     "sass": "^1.49.8",
     "source-map-explorer": "^2.5.2",
-    "typescript": "^4.5.5",
     "uuid": "^8.3.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "craco-alias": "^3.0.1"
   },
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "lint": "eslint --fix src/**/*.{js,jsx,ts,tsx} -c ./.eslintrc.js --cache"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "lint": "eslint ./src -c .eslintrc.js --ext .js,.jsx,.ts,.tsx .",
+    "lint:fix": "npm run lint --fix"
   },
   "browserslist": {
     "production": [
@@ -51,8 +46,11 @@
   },
   "devDependencies": {
     "@types/uuid": "^8.3.4",
-    "craco-alias": "^3.0.1",
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb-typescript-prettier": "^5.0.0",
     "eslint-import-resolver-alias": "^1.1.2",
-    "eslint-plugin-import": "^2.25.4"
+    "eslint-plugin-import": "^2.25.4",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5"
   }
 }

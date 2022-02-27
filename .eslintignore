@@ -5,3 +5,4 @@ node_modules/*
 
 # Do not format markdown files
 *.md
+.eslintrc.js
