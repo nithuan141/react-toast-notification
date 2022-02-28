@@ -1,6 +1,6 @@
 # React Toast Notification
 
-This project contains a generic react toast notification system which can be easily integrtaed and used in the componnets, and some sample usage. Developed using typeascript, react and craco. 
+This project contains a generic react toast notification system which can be easily integrated and used in the components, and some sample usage. Developed using typeascript, react and craco. 
 
 ## Available Scripts
 
