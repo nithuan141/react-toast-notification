@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { useNotification } from "@contexts/Notifications.context";
-import { NotificationType } from "@types";
+import { NotificationPosition, NotificationType } from "@types";
 import { Button, ButtonType } from "@components/Shared";
 
 import styles from "./Home.module.scss";
@@ -15,8 +15,9 @@ export const WarningButton: FC<WarningButton> = ({ callback }) => {
   const notify = () =>
     addNotification?.(
       "Warning",
-      "This is a sample warning notification",
+      "This is a sample warning notification showing on bottom left position",
       NotificationType.Warning,
+      NotificationPosition.BottomLeft,
       undefined,
       callback
     );

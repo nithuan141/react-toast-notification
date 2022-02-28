@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { v4 as uuidv4 } from "uuid";
-import { Notification, NotificationType } from "@types";
+import { Notification, NotificationPosition, NotificationType } from "@types";
 import { NotificationElement } from "./NotificationElement";
 
 test("verifies the notification renders", () => {
@@ -9,6 +9,7 @@ test("verifies the notification renders", () => {
     title: "Test Title",
     content: "Test notification",
     type: NotificationType.Success,
+    position: NotificationPosition.TopRight,
   };
 
   const dom = render(<NotificationElement notification={notification} />);

@@ -7,6 +7,7 @@ export enum NotificationType {
 
 export enum NotificationPosition {
   TopLeft,
-  TopCenter,
   TopRight,
+  BottomLeft,
+  BottomRight,
 }

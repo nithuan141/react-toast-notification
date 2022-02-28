@@ -5,7 +5,7 @@ export type Notification = {
   title: string | JSX.Element;
   content: string | JSX.Element;
   type: NotificationType;
-  position?: NotificationPosition;
+  position: NotificationPosition;
   timeout?: number;
   callback?: () => void | unknown;
 };

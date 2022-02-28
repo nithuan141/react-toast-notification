@@ -2,6 +2,7 @@
 build/*
 .yarn/*
 node_modules/*
+node_modules
 
 # Do not format markdown files
 *.md
