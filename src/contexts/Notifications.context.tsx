@@ -59,9 +59,7 @@ const NotificationProvider: React.FC<NotificationProviderProps> = ({
     const notification = notifications.find((x: Notification) => x.id === id);
     setNotifications(notifications.filter((x: Notification) => x.id !== id));
     // Triggering call back on remove if there is one.
-    if (notification?.callback) {
-      notification.callback?.();
-    }
+    notification?.callback?.();
   };
 
   const removeNotification = useCallback(remove, [notifications]);
