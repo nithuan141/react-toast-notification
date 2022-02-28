@@ -5,8 +5,8 @@ import { Notification, NotificationPosition, NotificationType } from "@types";
 export type NotificationProps = {
   notifications: Notification[];
   addNotification: (
-    title: string,
-    content: string,
+    title: string | JSX.Element | Element,
+    content: string | JSX.Element | Element,
     type: NotificationType,
     position?: NotificationPosition,
     timeout?: number,
@@ -39,8 +39,8 @@ const NotificationProvider: React.FC<NotificationProviderProps> = ({
   const nextId = () => uuidv4();
 
   const add = (
-    title: string,
-    content: string,
+    title: string | JSX.Element | Element,
+    content: string | JSX.Element | Element,
     type: NotificationType,
     position?: NotificationPosition,
     timeout?: number,

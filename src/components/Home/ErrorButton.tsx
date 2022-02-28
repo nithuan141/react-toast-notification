@@ -9,9 +9,13 @@ export const ErrorButton: FC = () => {
   const { addNotification } = useNotification();
 
   const notify = () =>
+    // A sample error toast with an html markup in content.
     addNotification?.(
       "Action Item",
-      "This is a sample error notification",
+      <span>
+        {"This is a sample error notification with "}
+        <strong>HTML markup</strong>
+      </span>,
       NotificationType.Error
     );
 

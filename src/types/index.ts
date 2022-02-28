@@ -2,8 +2,8 @@ import { NotificationPosition, NotificationType } from "./common";
 
 export type Notification = {
   id: string;
-  title: string | JSX.Element;
-  content: string | JSX.Element;
+  title: string | JSX.Element | Element;
+  content: string | JSX.Element | Element;
   type: NotificationType;
   position: NotificationPosition;
   timeout?: number;
