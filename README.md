@@ -2,6 +2,11 @@
 
 This project contains a generic react toast notification system which can be easily integrated and used in the components, and some sample usage. Developed using typeascript, react and craco. 
 
+## Branches
+
+* **main**   : The main branch contains the basic version of the notification with fixed position on top right corner of the scree.
+* **feature/notification-position** : This is an extended version with option to set the position of toast dynamicaly to any corner of the screen now, the same can be further extended.
+
 ## Available Scripts
 
 In the project directory, you can run:
